@@ -4,18 +4,25 @@ package com.connor.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
-@Controller
+@RestController
 public class ConnorController {
 
 
 
     @RequestMapping("/hello")
     @ResponseBody
-    public String hello(){
+    public Map<String,String> hello(String name){
 
-        return "hello";
+        Map<String,String> result = new HashMap<>();
+        result.put("name","connor");
+
+        return result;
     }
 
 }
