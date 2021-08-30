@@ -13,7 +13,7 @@ public class ConnorController {
 
     @RequestMapping("/hello")
     @ResponseBody
-    public String hello(){
+    public String hello(String name){
 
         return "hello";
     }
